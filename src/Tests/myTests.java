@@ -7,6 +7,12 @@ import sort.sortingAlgorithms;
 @SuppressWarnings("unused")
 public class myTests {
 	
+	int[] worstCase50 = new int[50];
+	int[] worstCase500 = new int[500];
+	int[] worstCase5000 = new int[5000];
+	int[] worstCase50000 = new int[50000];
+	int[] worstCase500000 = new int[500000];
+	
 	public boolean isSorted (int[] arr) {
 		for (int i = 0; i < arr.length - 1; i++) {
 			if (arr[i] > arr[i+1])
@@ -17,7 +23,7 @@ public class myTests {
 	}
 	
 	@Test
-	public void worstCaseMillion() {
+	public void worstCase() {
 		sortingAlgorithms sortObject = new sortingAlgorithms();
 		
 		int[] worstCaseMillion = new int[100000];
@@ -26,7 +32,6 @@ public class myTests {
 		for (int i = worstCaseMillion.length; i > 0 ; i--) {
 			worstCaseMillion[index] = i;
 			index++;
-			System.out.print(i + " ");
 		}
 		
 		assertEquals(true, isSorted(sortObject.insertionSort(worstCaseMillion.clone())));
