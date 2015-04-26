@@ -55,30 +55,45 @@ public class myTests {
 		for (int i = 0; i < 500000; i++) {
 			if (i < 50) {
 				worstCase50[i] = worstCase50.length - i;
+				randomCase50[i] = i;
 			}
 			
 			if (i < 500) {
 				worstCase500[i] = worstCase500.length - i;
+				randomCase500[i] = i;
 			}
 			
 			if (i < 5000) {
 				worstCase5000[i] = worstCase5000.length - i;
+				randomCase5000[i] = i;
 			}
 			
 			if (i < 50000) {
 				worstCase50000[i] = worstCase50000.length - i;
+				randomCase50000[i] = i;
 			}
 			
 			if (i < 100000) {
 				worstCase100000[i] = worstCase100000.length - i;
+				randomCase100000[i] = i;
 			}
 			
 			if (i < 250000) {
 				worstCase250000[i] = worstCase250000.length - i;
+				randomCase250000[i] = i;
 			}
 			
 			worstCase500000[i] = worstCase500000.length - i;
+			randomCase500000[i] = i;
 		}
+		
+		shuffleArray(randomCase50);
+		shuffleArray(randomCase500);
+		shuffleArray(randomCase5000);
+		shuffleArray(randomCase50000);
+		shuffleArray(randomCase100000);
+		shuffleArray(randomCase250000);
+		shuffleArray(randomCase500000);
 		
 		assertTrue(true);
 	}
