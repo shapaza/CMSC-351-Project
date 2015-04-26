@@ -5,9 +5,9 @@ public class sortingAlgorithms {
 	public int[] insertionSort (int[] arr) {
 		for (int i = 1; i < arr.length; i++) {
 			int temp = arr[i];
-			int j;
+			int j = i - 1;
 			
-			for (j = i - 1; j >= 0 ; j--) {
+			for (; j >= 0 ; j--) {
 				if (temp < arr[j])
 					arr[j + 1] = arr[j];
 			}
@@ -21,9 +21,10 @@ public class sortingAlgorithms {
 		for (int i = 0; i < arr.length - 1; i++) {
             int index = i;
             
-            for (int j = i + 1; j < arr.length; j++)
+            for (int j = i + 1; j < arr.length; j++) {
                 if (arr[j] < arr[index])
                     index = j;
+            }
       
             int smallerNumber = arr[index]; 
             arr[index] = arr[i];
