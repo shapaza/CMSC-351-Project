@@ -50,6 +50,7 @@ public class myTests {
 		}
 	}
 	
+	// setting up the arrays for testing
 	@Test
 	public void setUpArrays() {
 		for (int i = 0; i < 500000; i++) {
@@ -100,7 +101,7 @@ public class myTests {
 	
 	/* test cases for Insertion Sort worst case */
 	/* runs insertion sort on integer arrays sorted in reverse order */
-	/* arrays of size 50, 500, 5000, 50000, 100000, 250000, and 500000*/
+	/* arrays of size 50, 500, 5000, 50000, 100000, 250000, and 500000 */
 	@Test
 	public void worstCaseInsertion1() {
 		assertEquals(true, isSorted(sortObject.insertionSort(worstCase50.clone())));
@@ -137,10 +138,9 @@ public class myTests {
 	}
 	
 	
-	
 	/* test cases for Selection Sort worst case */
 	/* runs insertion sort on integer arrays sorted in reverse order */
-	/* arrays of size 50, 500, 5000, 50000, 100000, 250000, and 500000*/
+	/* arrays of size 50, 500, 5000, 50000, 100000, 250000, and 500000 */
 	@Test
 	public void worstCaseSelection1() {
 		assertEquals(true, isSorted(sortObject.selectionSort(worstCase50.clone())));
@@ -176,6 +176,82 @@ public class myTests {
 		assertEquals(true, isSorted(sortObject.selectionSort(worstCase500000.clone())));
 	}
 	
+	
+	/* test cases for Insertion Sort random case */
+	/* runs insertion sort on integer arrays sorted in random order */
+	/* arrays of size 50, 500, 5000, 50000, 100000, 250000, and 500000 */
+	@Test
+	public void randomCaseInsertion1() {
+		assertEquals(true, isSorted(sortObject.insertionSort(randomCase50.clone())));
+	}
+	
+	@Test
+	public void randomCaseInsertion2() {
+		assertEquals(true, isSorted(sortObject.insertionSort(randomCase500.clone())));
+	}
+	
+	@Test
+	public void randomCaseInsertion3() {
+		assertEquals(true, isSorted(sortObject.insertionSort(randomCase5000.clone())));
+	}
+	
+	@Test
+	public void randomCaseInsertion4() {
+		assertEquals(true, isSorted(sortObject.insertionSort(randomCase50000.clone())));
+	}
+	
+	@Test
+	public void randomCaseInsertion5() {
+		assertEquals(true, isSorted(sortObject.insertionSort(randomCase100000.clone())));
+	}
+	
+	@Test
+	public void randomCaseInsertion6() {
+		assertEquals(true, isSorted(sortObject.insertionSort(randomCase250000.clone())));
+	}
+	
+	@Test
+	public void randomCaseInsertion7() {
+		assertEquals(true, isSorted(sortObject.insertionSort(randomCase500000.clone())));
+	}
+	
+	/* test cases for selection Sort random case */
+	/* runs selection sort on integer arrays sorted in random order */
+	/* arrays of size 50, 500, 5000, 50000, 100000, 250000, and 500000 */
+	@Test
+	public void randomCaseSelection1() {
+		assertEquals(true, isSorted(sortObject.selectionSort(randomCase50.clone())));
+	}
+	
+	@Test
+	public void randomCaseSelection2() {
+		assertEquals(true, isSorted(sortObject.selectionSort(randomCase500.clone())));
+	}
+	
+	@Test
+	public void randomCaseSelection3() {
+		assertEquals(true, isSorted(sortObject.selectionSort(randomCase5000.clone())));
+	}
+	
+	@Test
+	public void randomCaseSelection4() {
+		assertEquals(true, isSorted(sortObject.selectionSort(randomCase50000.clone())));
+	}
+	
+	@Test
+	public void randomCaseSelection5() {
+		assertEquals(true, isSorted(sortObject.selectionSort(randomCase100000.clone())));
+	}
+	
+	@Test
+	public void randomCaseSelection6() {
+		assertEquals(true, isSorted(sortObject.selectionSort(randomCase250000.clone())));
+	}
+	
+	@Test
+	public void randomCaseSelection7() {
+		assertEquals(true, isSorted(sortObject.selectionSort(randomCase500000.clone())));
+	}
 	
 	
 }
